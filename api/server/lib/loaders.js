@@ -25,7 +25,9 @@ function loadContext(scenarioId) {
     return cache.contexts[scenarioId];
   }
 
-  const contextPath = path.join(process.cwd(), 'contexts', `${scenarioId}.json`);
+  // __dirname = api/server/lib
+  // contexts는 api/server/contexts
+  const contextPath = path.join(__dirname, '..', 'contexts', `${scenarioId}.json`);
 
   if (!fs.existsSync(contextPath)) {
     console.error(`Context not found: ${contextPath}`);
@@ -57,7 +59,9 @@ function loadPrompt(promptName) {
     return cache.prompts[promptName];
   }
 
-  const promptPath = path.join(process.cwd(), 'prompts', `${promptName}.txt`);
+  // __dirname = api/server/lib
+  // prompts는 api/server/prompts
+  const promptPath = path.join(__dirname, '..', 'prompts', `${promptName}.txt`);
 
   if (!fs.existsSync(promptPath)) {
     console.error(`Prompt not found: ${promptPath}`);
