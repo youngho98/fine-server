@@ -1,0 +1,28 @@
+{
+  "name": "fine-server",
+  "version": "1.0.0",
+  "description": "직장인 올인원 어시스턴트 백엔드 API",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "test": "echo \"No tests yet\"",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "assistant",
+    "openai",
+    "vercel",
+    "serverless"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "openai": "^4.20.0"
+  },
+  "devDependencies": {
+    "vercel": "^33.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
