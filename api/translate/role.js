@@ -6,9 +6,9 @@
  * Response: JSON (LLM이 생성한 결과)
  */
 
-const { handleCors } = require('./server/lib/cors');
-const { getScenarioContext, loadPrompt } = require('./server/lib/loaders');
-const { generateJsonResponse } = require('./server/lib/llmJson');
+const { handleCors } = require('../server/lib/cors');
+const { getScenarioContext, loadPrompt } = require('../server/lib/loaders');
+const { generateJsonResponse } = require('../server/lib/llmJson');
 
 module.exports = async (req, res) => {
   // CORS 처리 및 OPTIONS preflight 응답
